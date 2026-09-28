@@ -1,0 +1,60 @@
+
+=== D=10: 29 functions, 51 runs ===
+Friedman chi2=148.40 F_F=76.10 df=[7, 196] p=0
+  LSHADE  2.138   solved=7
+  CMAES   2.414   solved=6
+  DE      3.000   solved=6
+  MSBO    3.621   solved=0
+  ABC     4.224   solved=1
+  GA      6.310   solved=0
+  PSO     6.707   solved=1
+  GWO     7.586   solved=0
+  post-hoc GA      z=+4.18 p_holm=0.000145 reject=True better=MSBO
+  post-hoc PSO     z=+4.80 p_holm=9.63e-06 reject=True better=MSBO
+  post-hoc DE      z=-0.96 p_holm=0.669 reject=False better=DE
+  post-hoc ABC     z=+0.94 p_holm=0.669 reject=False better=MSBO
+  post-hoc GWO     z=+6.16 p_holm=4.94e-09 reject=True better=MSBO
+  post-hoc CMAES   z=-1.88 p_holm=0.182 reject=False better=CMAES
+  post-hoc LSHADE  z=-2.31 p_holm=0.0847 reject=False better=LSHADE
+  W/T/L vs GA     : 27/2/0  A12=0.900
+  W/T/L vs PSO    : 26/2/1  A12=0.870
+  W/T/L vs DE     : 7/4/18  A12=0.296
+  W/T/L vs ABC    : 16/6/7  A12=0.641
+  W/T/L vs GWO    : 29/0/0  A12=0.982
+  W/T/L vs CMAES  : 3/6/20  A12=0.212
+  W/T/L vs LSHADE : 3/8/18  A12=0.200
+  Unimodal           n= 2 {'MSBO': 5.0, 'GA': 6.0, 'PSO': 4.75, 'DE': 2.25, 'ABC': 6.0, 'GWO': 7.5, 'CMAES': 2.25, 'LSHADE': 2.25}
+  Simple multimodal  n= 7 {'MSBO': 3.14, 'GA': 5.57, 'PSO': 7.0, 'DE': 4.07, 'ABC': 4.21, 'GWO': 8.0, 'CMAES': 1.43, 'LSHADE': 2.57}
+  Hybrid             n=10 {'MSBO': 4.0, 'GA': 6.3, 'PSO': 6.6, 'DE': 2.05, 'ABC': 4.7, 'GWO': 7.8, 'CMAES': 2.95, 'LSHADE': 1.6}
+  Composition        n=10 {'MSBO': 3.3, 'GA': 6.9, 'PSO': 7.0, 'DE': 3.35, 'ABC': 3.4, 'GWO': 7.1, 'CMAES': 2.6, 'LSHADE': 2.35}
+  [sensitivity] single-start CMA-ES rank: 4.69  MSBO rank: 3.1
+
+=== D=30: 10 functions, 10 runs ===
+Friedman chi2=54.53 F_F=31.73 df=[7, 63] p=0
+  LSHADE  1.700   solved=3
+  CMAES   2.000   solved=3
+  DE      3.000   solved=1
+  MSBO    4.200   solved=0
+  ABC     4.700   solved=0
+  GA      6.500   solved=0
+  PSO     6.600   solved=0
+  GWO     7.300   solved=0
+  post-hoc GA      z=+2.10 p_holm=0.143 reject=False better=MSBO
+  post-hoc PSO     z=+2.19 p_holm=0.142 reject=False better=MSBO
+  post-hoc DE      z=-1.10 p_holm=0.547 reject=False better=DE
+  post-hoc ABC     z=+0.46 p_holm=0.648 reject=False better=MSBO
+  post-hoc GWO     z=+2.83 p_holm=0.0326 reject=True better=MSBO
+  post-hoc CMAES   z=-2.01 p_holm=0.143 reject=False better=CMAES
+  post-hoc LSHADE  z=-2.28 p_holm=0.135 reject=False better=LSHADE
+  W/T/L vs GA     : 7/2/1  A12=0.772
+  W/T/L vs PSO    : 8/2/0  A12=0.898
+  W/T/L vs DE     : 0/5/5  A12=0.206
+  W/T/L vs ABC    : 3/6/1  A12=0.632
+  W/T/L vs GWO    : 10/0/0  A12=1.000
+  W/T/L vs CMAES  : 0/2/8  A12=0.117
+  W/T/L vs LSHADE : 0/1/9  A12=0.050
+  Unimodal           n= 2 {'MSBO': 5.0, 'GA': 5.0, 'PSO': 6.0, 'DE': 4.0, 'ABC': 5.5, 'GWO': 7.5, 'CMAES': 1.5, 'LSHADE': 1.5}
+  Simple multimodal  n= 2 {'MSBO': 5.0, 'GA': 6.5, 'PSO': 7.0, 'DE': 3.0, 'ABC': 3.0, 'GWO': 7.0, 'CMAES': 2.5, 'LSHADE': 2.0}
+  Hybrid             n= 2 {'MSBO': 4.0, 'GA': 6.5, 'PSO': 6.5, 'DE': 3.0, 'ABC': 5.0, 'GWO': 8.0, 'CMAES': 1.5, 'LSHADE': 1.5}
+  Composition        n= 4 {'MSBO': 3.5, 'GA': 7.25, 'PSO': 6.75, 'DE': 2.5, 'ABC': 5.0, 'GWO': 7.0, 'CMAES': 2.25, 'LSHADE': 1.75}
+  [sensitivity] single-start CMA-ES rank: 3.4  MSBO rank: 3.9
