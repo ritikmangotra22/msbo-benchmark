@@ -91,3 +91,27 @@ code instead of relying on the manuscript's account of them.
 
 Not yet archived: no permanent identifier exists yet, and no license has been chosen (choose one, e.g. MIT for code
 and CC-BY for data, before publishing). Insert the archive link into the paper's Section 22 once it exists.
+
+## CFD pilot (Section 18.7 of the paper)
+
+`cfd/` contains the small real OpenFOAM pilot: `cfd_objective.py` (drives `simpleFoam` on the
+built-in Pitz & Daily case), `cfd_problem.py` (the MSBO/DE-compatible problem wrapper, synthetic
+target = X_r/H 7.423 from theta_true = (0.075, 1.38, 1.87, 0.85, 1.15)), `run_cfd_opt.py` (the
+3-seed, budget-60 comparison), and its output `results_cfd_opt.csv`.
+
+**This is NOT the Driver-Seegmiller case the paper specifies in Sections 13-17** — it is a
+substitute case used because no mesh/data for that exact rig was available. It is a synthetic
+parameter-recovery test, not a claim of experimental validation. Requires an OpenFOAM v1912
+installation (`apt install openfoam` on Ubuntu) to re-run.
+
+**Grid convergence** (Table 18a of the paper): `grid_study.py` builds coarse/production/fine
+meshes from the same `blockMeshDict` and compares reattachment length; `vtu_reader.py` is a
+minimal, dependency-free VTU parser written because `meshio` failed unpredictably on some
+mesh sizes of OpenFOAM's `foamToVTK` output on this system.
+
+**Citation for the real experimental case**: Pitz RW, Daily JW (1983) Combustion in a turbulent
+mixing layer formed at a rearward-facing step. AIAA Journal 21(11):1565-1570.
+https://doi.org/10.2514/3.8290 — OpenFOAM's own documentation confirms the tutorial's setup is
+derived from this experiment. The specific numerical reattachment length reported in that paper
+has not been extracted/verified here; the synthetic target in `cfd_problem.py` should be replaced
+with it once available (see paper Table 21).
